@@ -18,8 +18,13 @@ public class Array3 {
         System.out.println(ex.haveThree(arr));*/
 
         // task 20
-        int [] arr = {23,24,25};
-        System.out.println(ex.tripleUp(arr));
+        /*int [] arr = {23,24,25};
+        System.out.println(ex.tripleUp(arr));*/
+
+        // task 21
+        int [] arr = {23,10,2,3,20,18};
+        System.out.println(java.util.Arrays.toString(ex.tenRun(arr)));
+
 
     }
 
@@ -78,5 +83,21 @@ public class Array3 {
             }
         }
         return false;
+    }
+
+    public int [] tenRun(int [] arr){
+        int currentTen = 0;
+        boolean foundTen =false;
+        
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i] % 10 == 0){
+                currentTen = arr[i];
+                foundTen = true;
+
+            } else if (foundTen) {
+                arr[i]= currentTen;
+            }
+        }
+        return arr;
     }
 }
