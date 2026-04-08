@@ -14,8 +14,12 @@ public class Array3 {
         System.out.println(ex.has77(arr));*/
 
         // task 19
-        int [] arr = {3,3,3,1,2,1};
-        System.out.println(ex.haveThree(arr));
+        /*int [] arr = {3,3,3,1,2,1};
+        System.out.println(ex.haveThree(arr));*/
+
+        // task 20
+        int [] arr = {23,24,25};
+        System.out.println(ex.tripleUp(arr));
 
     }
 
@@ -65,5 +69,14 @@ public class Array3 {
 
       return false;
 
+    }
+
+    public boolean tripleUp(int [] arr){
+        for(int i = 0 ; i < arr.length - 2 ; i++){
+            if((arr[i+1] == arr[i] + 1) && (arr[i+2] == arr[i] + 2)){
+                return true;
+            }
+        }
+        return false;
     }
 }
