@@ -22,9 +22,12 @@ public class Array3 {
         System.out.println(ex.tripleUp(arr));*/
 
         // task 21
-        int [] arr = {23,10,2,3,20,18};
-        System.out.println(java.util.Arrays.toString(ex.tenRun(arr)));
+//        int [] arr = {23,10,2,3,20,18};
+//        System.out.println(java.util.Arrays.toString(ex.tenRun(arr)));
 
+        // task 22
+        int [] arr = {1,2,3};
+        System.out.println(java.util.Arrays.toString(ex.notAlone(arr,2)));
 
     }
 
@@ -96,6 +99,14 @@ public class Array3 {
 
             } else if (foundTen) {
                 arr[i]= currentTen;
+            }
+        }
+        return arr;
+    }
+    public int [] notAlone(int [] arr, int value){
+        for(int i = 1 ; i < arr.length - 1 ; i++){
+            if(arr[i] == value && arr[i] != arr[i-1] && arr[i] != arr[i+1]){
+                arr[i] = Math.max(arr[i-1],arr[i+1]);
             }
         }
         return arr;
