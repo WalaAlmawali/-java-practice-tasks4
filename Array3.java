@@ -30,9 +30,12 @@ public class Array3 {
         System.out.println(java.util.Arrays.toString(ex.notAlone(arr,2)));*/
 
         // task 23
-        int [] arr = {0,5,0,3};
-        System.out.println(java.util.Arrays.toString(ex.zeroMax(arr)));
+       /* int [] arr = {0,5,0,3};
+        System.out.println(java.util.Arrays.toString(ex.zeroMax(arr)));*/
 
+        // task 24
+        int [] arr = {1,2,3,4,100};
+        System.out.println(ex.centeredAverage(arr));
 
     }
 
@@ -133,5 +136,23 @@ public class Array3 {
             }
         }
         return arr;
+    }
+    public int centeredAverage(int [] arr){
+        int sum = 0 ;
+        int min = arr[0];
+        int max = arr[0];
+
+        for(int i = 0 ; i < arr.length ; i++){
+            sum += arr[i];
+
+            if(arr[i] < min){
+                min = arr[i];
+            }
+
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+        return (sum - min - max) /(arr.length -2);
     }
 }
