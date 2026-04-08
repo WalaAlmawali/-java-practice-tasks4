@@ -34,9 +34,12 @@ public class Array3 {
         System.out.println(java.util.Arrays.toString(ex.zeroMax(arr)));*/
 
         // task 24
-        int [] arr = {1,2,3,4,100};
-        System.out.println(ex.centeredAverage(arr));
+       /* int [] arr = {1,2,3,4,100};
+        System.out.println(ex.centeredAverage(arr));*/
 
+        // task 25
+        int [] arr = {1,5,2,4,100};
+        System.out.println(ex.has22(arr));
     }
 
     public boolean only14(int [] arr){
@@ -154,5 +157,14 @@ public class Array3 {
             }
         }
         return (sum - min - max) /(arr.length -2);
+    }
+
+    public boolean has22(int [] arr){
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i] == 2 && arr[i+1] == 2 ){
+                return true;
+            }
+        }
+        return false;
     }
 }
