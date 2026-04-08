@@ -6,8 +6,12 @@ public class Array3 {
         System.out.println(ex.only14(arr));*/
 
         // task 17
-        int [] arr = {1,2,1,3};
-        System.out.println(ex.isEverywhere(arr,2));
+       /* int [] arr = {1,2,1,3};
+        System.out.println(ex.isEverywhere(arr,2));*/
+
+        // task 18
+        int [] arr = {1,7,2,7};
+        System.out.println(ex.has77(arr));
 
     }
 
@@ -28,5 +32,14 @@ public class Array3 {
             }
         }
         return true;
+    }
+
+    public boolean has77(int [] arr){
+        for(int i = 0 ; i < arr.length; i++){
+            if((arr[i]== 7 && arr[i+1] == 7) || (arr[i]== 7 && arr[i+2]== 7) ){
+                return true;
+            }
+        }
+        return false;
     }
 }
