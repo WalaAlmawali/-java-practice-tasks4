@@ -38,8 +38,12 @@ public class Array3 {
         System.out.println(ex.centeredAverage(arr));*/
 
         // task 25
-        int [] arr = {1,5,2,4,100};
-        System.out.println(ex.has22(arr));
+        /*int [] arr = {1,5,2,4,100};
+        System.out.println(ex.has22(arr));*/
+
+        // task 26
+        int [] arr = {1,1,4,4,4};
+        System.out.println(ex.more14(arr));
     }
 
     public boolean only14(int [] arr){
@@ -164,6 +168,23 @@ public class Array3 {
             if(arr[i] == 2 && arr[i+1] == 2 ){
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean more14(int [] arr){
+        int count1 =0;
+        int count4 =0;
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i] == 1){
+                count1++;
+            }
+            if(arr[i] == 4){
+                count4++;
+            }
+        }
+        if(count1 > count4){
+            return true;
         }
         return false;
     }
