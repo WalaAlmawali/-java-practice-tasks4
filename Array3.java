@@ -26,8 +26,13 @@ public class Array3 {
 //        System.out.println(java.util.Arrays.toString(ex.tenRun(arr)));
 
         // task 22
-        int [] arr = {1,2,3};
-        System.out.println(java.util.Arrays.toString(ex.notAlone(arr,2)));
+       /* int [] arr = {1,2,3};
+        System.out.println(java.util.Arrays.toString(ex.notAlone(arr,2)));*/
+
+        // task 23
+        int [] arr = {0,5,0,3};
+        System.out.println(java.util.Arrays.toString(ex.zeroMax(arr)));
+
 
     }
 
@@ -107,6 +112,24 @@ public class Array3 {
         for(int i = 1 ; i < arr.length - 1 ; i++){
             if(arr[i] == value && arr[i] != arr[i-1] && arr[i] != arr[i+1]){
                 arr[i] = Math.max(arr[i-1],arr[i+1]);
+            }
+        }
+        return arr;
+    }
+
+    public int [] zeroMax(int [] arr){
+        for(int i = 0 ; i < arr.length ; i++){
+            if(arr[i] == 0){
+                int maxOdd = 0 ;
+
+                for (int j = i+1; j < arr.length; j++){
+                    if(arr[j] % 2 !=0 && arr[j] > maxOdd){
+                        maxOdd = arr[j];
+                    }
+                }
+                if(maxOdd != 0){
+                    arr[i] = maxOdd;
+                }
             }
         }
         return arr;
