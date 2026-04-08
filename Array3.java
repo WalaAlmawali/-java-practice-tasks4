@@ -10,8 +10,12 @@ public class Array3 {
         System.out.println(ex.isEverywhere(arr,2));*/
 
         // task 18
-        int [] arr = {1,7,2,7};
-        System.out.println(ex.has77(arr));
+       /* int [] arr = {1,7,2,7};
+        System.out.println(ex.has77(arr));*/
+
+        // task 19
+        int [] arr = {3,3,3,1,2,1};
+        System.out.println(ex.haveThree(arr));
 
     }
 
@@ -41,5 +45,25 @@ public class Array3 {
             }
         }
         return false;
+    }
+
+    public boolean haveThree(int [] arr){
+    int count3 = 0;
+
+
+        for(int i = 0 ; i < arr.length ; i++) {
+            if(arr[i] == 3 && arr[i+1] == 3){
+                 return false;
+            }else if (arr[i] == 3){
+                count3++;
+            }
+
+            if(count3 == 3){
+                return true;
+            }
+        }
+
+      return false;
+
     }
 }
