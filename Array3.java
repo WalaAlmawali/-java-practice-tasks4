@@ -48,7 +48,12 @@ public class Array3 {
         System.out.println(ex.more14(arr));*/
 
         // task 27
-        System.out.println(Arrays.toString(ex.fizzArray2(5)));
+       // System.out.println(Arrays.toString(ex.fizzArray2(5)));
+
+        // task 28
+        int [] arr = {1,2,2,1,4,4};
+        System.out.println(ex.either24(arr));
+
     }
 
     public boolean only14(int [] arr){
@@ -200,5 +205,27 @@ public class Array3 {
             result[i] = String.valueOf(i);
         }
         return result;
+    }
+
+    public boolean either24(int [] arr){
+        boolean has22 = false;
+        boolean has44 = false;
+
+        for(int i = 0 ; i < arr.length -1 ; i++){
+            if(arr[i] == 2 && arr[i+1] == 2){
+                has22 = true;
+            }
+            if( arr[i] == 4 && arr[i+1] == 4) {
+                has44 = true;
+            }
+
+        }
+        if(has44 && !has22){
+            return true;
+        }
+        if(has22 && !has44){
+            return true;
+        }
+        return false;
     }
 }
