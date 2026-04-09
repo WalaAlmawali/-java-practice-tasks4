@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Array3 {
     public static void main(String[] args){
         Array3 ex = new Array3();
@@ -42,8 +44,11 @@ public class Array3 {
         System.out.println(ex.has22(arr));*/
 
         // task 26
-        int [] arr = {1,1,4,4,4};
-        System.out.println(ex.more14(arr));
+       /* int [] arr = {1,1,4,4,4};
+        System.out.println(ex.more14(arr));*/
+
+        // task 27
+        System.out.println(Arrays.toString(ex.fizzArray2(5)));
     }
 
     public boolean only14(int [] arr){
@@ -187,5 +192,13 @@ public class Array3 {
             return true;
         }
         return false;
+    }
+    public String [] fizzArray2(int n){
+        String [] result = new String[n];
+
+        for(int i = 0 ; i < n ; i++){
+            result[i] = String.valueOf(i);
+        }
+        return result;
     }
 }
